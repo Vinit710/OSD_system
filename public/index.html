@@ -5,39 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oil Spill Detection System</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
+        /* Reset some default styles */
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            color: #fff;
+        }
+
         h1 {
-            margin-top: 50px;
+            font-size: 2.5em;
+            margin-bottom: 20px;
         }
+
         .button-container {
-            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
+
         .button {
-            background-color: #4CAF50;
+            background-color: #ff416c;
             color: white;
-            padding: 15px 30px;
-            margin: 20px;
+            padding: 15px 40px;
+            margin: 10px;
             border: none;
             cursor: pointer;
             font-size: 18px;
-            border-radius: 5px;
+            border-radius: 50px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
+
         .button:hover {
-            background-color: #45a049;
+            background-color: #ff4b2b;
+            transform: translateY(-5px);
+        }
+
+        .button:active {
+            transform: translateY(0);
+        }
+
+        /* Media query for smaller screens */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .button {
+                padding: 12px 30px;
+                font-size: 16px;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to the Oil Spill Detection System</h1>
-    <div class="button-container">
-        <button class="button" onclick="location.href='ship_tracking_map.html'">Monitor and Track</button>
-        <button class="button" onclick="location.href='detect_spill.html'">Detect Spill</button>
+    <div>
+        <h1>Welcome to the Oil Spill Detection System</h1>
+        <div class="button-container">
+            <button class="button" onclick="location.href='ship_tracking_map.html'">Monitor and Track</button>
+            <button class="button" onclick="location.href='detect_spill.html'">Detect Spill</button>
+        </div>
     </div>
 </body>
 </html>
